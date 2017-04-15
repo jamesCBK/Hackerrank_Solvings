@@ -1,0 +1,37 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int i=0,n,count=0,a,k,l;
+   
+    char* s = (char *)malloc(10240 * sizeof(char));
+    scanf("%s",s);
+    
+    n=strlen(s);
+     
+   for(l='A',i='a';l<='Z',i<='z';l++,i++)
+   {
+       for(k=0;k<n;k++){ //if (s[l]>= 'A' && s[l] <= 'Z')
+       {
+          count++;
+            
+          } 
+       if(i==s[k] || l==s[k])
+       { 
+        count++;  
+        break;
+        }
+       }}
+    if(count==26)
+        {
+        printf("pangram");
+        }
+    else {printf("not pangram");}
+            
+    return 0;
+}
