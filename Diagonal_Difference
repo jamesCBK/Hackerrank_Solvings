@@ -1,0 +1,50 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int n; 
+    scanf("%d",&n);
+    int a[n][n];
+    int sum=0,num=0,num_j,sum1=0,sum3=0,bas_sum;
+    for(int a_i = 0; a_i < n; a_i++){
+       for(int a_j = 0; a_j < n; a_j++){
+          
+          scanf("%d",&a[a_i][a_j]);
+       }
+    }
+    
+    
+     for(int a_i = 0; a_i < n; a_i++){
+       for(int a_j = num; a_j <= a_i; a_j++){
+           sum =sum + a[a_i][a_j];
+            num++;
+       }}
+    num_j=n;
+  
+    
+    
+    
+    
+   int a_j=0 ;
+    a_j= n-1;
+     for(int a_i = 0; a_i < n; a_i++){
+       sum1=sum1 + a[a_i][a_j];
+         a_j--;
+         
+       }
+    sum3= sum1-sum;
+    bas_sum = abs(sum3);
+    printf("%d",bas_sum);
+    
+    
+    
+    
+    
+    
+    return 0;
+}
