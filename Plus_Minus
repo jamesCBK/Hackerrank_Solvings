@@ -1,0 +1,37 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int n; 
+    float neg_ans,pos_ans,zero_ans;
+    scanf("%d",&n);
+    int arr[n],neg=0,pos=0,zero=0;
+    for(int arr_i = 0; arr_i < n; arr_i++){
+       scanf("%d",&arr[arr_i]);
+    }
+    for(int arr_i = 0; arr_i < n; arr_i++){
+    if(arr[arr_i]<0)
+        {
+        neg++;
+    }
+        else if(arr[arr_i]>0)
+            {
+            pos++;
+        }
+        else if(arr[arr_i]==0)
+            {
+            zero++;
+        }
+    }
+   
+    neg_ans = (float)neg/n ;
+    pos_ans = (float)pos/n;
+    zero_ans = (float)zero/n;
+    printf("%0.3f\n%0.3f\n%0.3f\n",pos_ans,neg_ans,zero_ans);
+    return 0;
+}
