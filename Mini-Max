@@ -1,0 +1,59 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    long int a; 
+    long int b; 
+    long int c; 
+    long int d;
+    long int e;
+    long int sum1,sum2,sum3,sum4,sum5;
+    long int smallest, largest;
+    scanf("%lld %lld %lld %lld %lld",&a,&b,&c,&d,&e);
+    sum1 = b+c+d+e;
+    sum2 = a+c+d+e;
+    sum3 = a+b+d+e;
+    sum4 = a+b+c+e;
+    sum5 = a+b+c+d;
+    if(sum1>sum2)
+        {
+        largest  = sum1;
+        smallest = sum2;
+    }
+    else
+        {
+        largest = sum2;
+        smallest = sum1;
+    }
+    if(largest < sum3)
+        {
+        largest = sum3;
+    }
+     if(largest < sum4)
+         {
+         largest = sum4;
+     }
+     if(largest < sum5)
+         {
+          largest = sum5;
+     }
+    if(smallest > sum3)
+        {
+        smallest = sum3;   
+    }
+    if(smallest > sum4)
+        {
+        smallest = sum4;
+    }
+    if(smallest > sum5)
+        {
+         smallest = sum5;
+    }
+    printf("%lld %lld",smallest,largest);
+    return 0;
+}
