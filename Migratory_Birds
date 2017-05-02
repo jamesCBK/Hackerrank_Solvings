@@ -1,0 +1,44 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int n,c=0,greater=0,greatest=0; 
+    scanf("%d",&n);
+    int *types = malloc(sizeof(int) * n);
+    for(int types_i = 0; types_i < n; types_i++){
+       scanf("%d",&types[types_i]);
+    }
+     int *b = malloc(sizeof(int)*n);
+    for(int j=1;j<=5;j++)
+        {
+       int c=0;
+    for(int i=0;i<n;i++)
+        {
+        if(j==types[i])
+            {
+            c++;
+        }
+        b[j] = c;
+    }}
+ 
+    greater = b[1];
+    
+    for (int i = 1; i <= 5; i++) {
+	if (b[i] > greater) {
+	greater = b[i];
+    }}
+    for (int i = 1; i <= 5; i++) {
+        if(greater == b[i])
+            {
+            greatest = i;
+        }
+    }
+    printf("%d",greatest);
+    // your code goes here
+    return 0;
+}
